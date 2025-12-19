@@ -1,9 +1,12 @@
 import 'package:e_commerce/features/authentication/screens/onboarding/widgets/onboarding_page.dart';
 import 'package:e_commerce/utils/constants/images.dart';
+import 'package:e_commerce/utils/constants/sizes.dart';
 import 'package:e_commerce/utils/constants/texts.dart';
 import 'package:e_commerce/utils/helpers/device_helpers.dart';
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
+
+import '../../../../common/widgets/button/elevated_btn.dart';
 
 class OnBoardingScreen extends StatelessWidget{
   const OnBoardingScreen({super.key});
@@ -22,13 +25,20 @@ class OnBoardingScreen extends StatelessWidget{
             ],
           ),
           OnBoardingDotNavigation(),
-          ElevatedButton(onPressed: (){}, child: Text('Next'))
+          Positioned(
+            bottom: USizes.spacebtwItems/2,
+              child: UElevatedButton(
+                child: Text("Next"),
+                onPressed: (){},
+              ))
         ],
       ),
     );
   }
 
 }
+
+
 
 class OnBoardingDotNavigation extends StatelessWidget {
   const OnBoardingDotNavigation({
