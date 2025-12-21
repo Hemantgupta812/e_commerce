@@ -19,7 +19,6 @@ class OnBoardingPage extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.only(right: USizes.defaultSpace,left: USizes.defaultSpace,top: USizes.defaultSpace),
       child: Column(
-
         children: [
           Lottie.asset(animation),
           Text(title,
